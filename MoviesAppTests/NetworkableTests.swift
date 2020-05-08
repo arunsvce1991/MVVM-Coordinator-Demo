@@ -40,7 +40,7 @@ class NetworkableTests: XCTestCase {
             XCTAssertEqual(self.subject.endPoint, self.urlSession.requestURL)
             XCTAssertNil(result.error)
             XCTAssertNotNil(result.value)
-            XCTAssertEqual(result.value?.movies.first?.title, "test title")
+            XCTAssertEqual(result.value?.movies.first?.title, "test title1")
             expectation.fulfill()
         }
         
