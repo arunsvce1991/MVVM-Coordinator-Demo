@@ -44,7 +44,7 @@ class NetworkableTests: XCTestCase {
             expectation.fulfill()
         }
         
-        let moviesDetails = MoviesDetails(title: "test title", year: "year", rated: "rated",
+        let moviesDetails = MoviesDetails(title: "test title1", year: "year", rated: "rated",
                                       released: "released", runtime: "runtime", genre: "",
                                       director: "", writer: "", actors: "", plot: "",
                                       language: "", country: "", awards: "", poster1: "",
