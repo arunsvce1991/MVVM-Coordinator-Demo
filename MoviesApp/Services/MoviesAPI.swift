@@ -13,7 +13,6 @@ protocol MoviesAPI: Networkable {
 }
 
 class MoviesAPIV1: MoviesAPI {
-    
     let session: URLSession
     let endPoint: String
     
@@ -25,7 +24,7 @@ class MoviesAPIV1: MoviesAPI {
     
     convenience init(session: URLSession = URLSession(configuration:
         URLSessionConfiguration.default)) {
-        self.init(session: session, endPoint: "https://api.jsonbin.io/b/5e86bb0ef4dba3539aac2f2a")
+        self.init(session: session, endPoint: "http://api.jsonbin.io/b/5e86bb0ef4dba3539aac2f2a")
     }
     
     func getMovies(resultHandler: @escaping ResultHandler<MoviesResponseModel>) {

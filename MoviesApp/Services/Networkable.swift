@@ -27,7 +27,7 @@ extension Networkable {
         
         let urlRequest = URLRequest(url: url)
         
-        session.dataTask(with: urlRequest) { (data, response, error) in
+        session.dataTask(with: urlRequest) { (data, _, error) in
             if let error = error {
                 completion(.failure(.connectivityError(error)))
                 return
@@ -56,4 +56,3 @@ enum ServiceError: Error {
     case invalidBody
     case malformedUrl
 }
-

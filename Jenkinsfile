@@ -9,7 +9,11 @@ stage("Source Checkout") {
 checkout scm
 }
 
-stage("Running XcodeBuild") {
+stage("Running Danger") {
+sh "danger-swift ci"
+}
+
+stage("Running Tests") {
 
 sh "/usr/local/bin/fastlane scan"
 //sh "xcodebuild -scheme '${test_scheme}' -configuration Debug build test -destination 'platform=iOS Simulator,name=${simulator_device}'"

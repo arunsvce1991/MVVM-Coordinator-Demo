@@ -24,7 +24,7 @@ class MoviesCoordinator: Coordinator {
 
     init(router: Routable = Router(),
          moviesListViewModelBuilder: @escaping MoviesListViewModelBuilder = { MoviesListViewModel() },
-        movieDetailsViewModelBuilder: @escaping MovieDetailsViewModelBuilder = { MovieDetailsViewModel(movieDetails: $0) }) {
+         movieDetailsViewModelBuilder: @escaping MovieDetailsViewModelBuilder = { MovieDetailsViewModel(movieDetails: $0) }) {
         self.router = router
         self.moviesListViewModelBuilder = moviesListViewModelBuilder
         self.movieDetailsViewModelBuilder = movieDetailsViewModelBuilder

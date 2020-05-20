@@ -29,7 +29,7 @@ class MoviesListViewModel: MoviesListViewable {
     }
     
     func fetchMoviesList(successCompletion: @escaping SuccessHandler, failureCompletion: @escaping FailureHandler) {
-        moviesService.getMovies{ [weak self] in
+        moviesService.getMovies { [weak self] in
                 switch $0 {
                 case let .success(value):
                     self?.movies = value.movies

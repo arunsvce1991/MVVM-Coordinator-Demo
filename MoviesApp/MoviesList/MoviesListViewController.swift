@@ -39,7 +39,7 @@ class MoviesListViewController: BaseViewController<MoviesListView> {
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.navigationBar.largeTitleTextAttributes =
             [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 30),
-             NSAttributedString.Key.foregroundColor:  UIColor.black]
+             NSAttributedString.Key.foregroundColor: UIColor.black]
         
         navigationController.navigationBar.layoutMargins.left = 25
         navigationController.navigationBar.barTintColor = .white
@@ -91,7 +91,7 @@ extension MoviesListViewController: UITableViewDelegate, UITableViewDataSource {
         
         if let cachedImage = viewModel.cache.object(forKey: posterLink as AnyObject) {
             cell.updatePoster(with: cachedImage as? UIImage)
-        }else {
+        } else {
             DispatchQueue.global().async { [weak self] in
                 guard let url = URL(string: posterLink),
                     let data = NSData(contentsOf: url) else { return }
