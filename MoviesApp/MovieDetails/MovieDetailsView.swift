@@ -8,6 +8,8 @@
 
 import UIKit
 import SnapKit
+import MoviesService
+import MoviesDataModel
 
 class MovieDetailsView: UIView {
     private lazy var scrollView: UIScrollView = {

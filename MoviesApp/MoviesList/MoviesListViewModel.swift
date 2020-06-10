@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import MoviesService
+import MoviesDataModel
 
 typealias SuccessHandler = () -> Void
 typealias FailureHandler = (ServiceError) -> Void

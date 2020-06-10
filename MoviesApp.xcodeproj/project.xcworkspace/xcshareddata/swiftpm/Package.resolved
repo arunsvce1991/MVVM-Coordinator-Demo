@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MoviesService",
+        "repositoryURL": "git@github.com:arunsvce1991/MoviesService.git",
+        "state": {
+          "branch": null,
+          "revision": "45167112e6282e74d3e4b7ed82007066f5ed3f26",
+          "version": "1.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

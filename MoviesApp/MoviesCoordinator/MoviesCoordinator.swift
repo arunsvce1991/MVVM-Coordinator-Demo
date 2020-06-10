@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import MoviesService
+import MoviesDataModel
 
 protocol MoviesFlowDelegate: AnyObject {
     func navigateToMovieDetails(with movieDetails: MoviesDetails)

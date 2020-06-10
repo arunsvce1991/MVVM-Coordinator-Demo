@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import MoviesService
+import MoviesDataModel
 
 protocol MovieDetailsViewable {
     var movieDetails: MoviesDetails { get }
