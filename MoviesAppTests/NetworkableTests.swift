@@ -22,7 +22,7 @@ class NetworkableTests: XCTestCase {
     
     func test_whenURLSessionReturnsError_shouldReturnTheRespectiveError() {
         let expectation = XCTestExpectation()
-        subject.makeServiceCall() { (result: Result<MoviesResponseModel, ServiceError>) in
+        subject.makeServiceCall { (result: Result<MoviesResponseModel, ServiceError>) in
             XCTAssert(self.urlSession.isDataTaskCalled ?? false)
             XCTAssertEqual(self.subject.endPoint, self.urlSession.requestURL)
             XCTAssertEqual(result.error, .connectivityError(TestError.simpleError))
@@ -35,7 +35,7 @@ class NetworkableTests: XCTestCase {
     
     func test_whenDataIsReceived_ShouldReturnResponseModel() {
         let expectation = XCTestExpectation()
-        subject.makeServiceCall() { (result: Result<MoviesResponseModel, ServiceError>) in
+        subject.makeServiceCall { (result: Result<MoviesResponseModel, ServiceError>) in
             XCTAssert(self.urlSession.isDataTaskCalled ?? false)
             XCTAssertEqual(self.subject.endPoint, self.urlSession.requestURL)
             XCTAssertNil(result.error)
