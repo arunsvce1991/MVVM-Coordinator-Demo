@@ -9,6 +9,8 @@
 import XCTest
 
 @testable import MoviesApp
+import MoviesService
+import MoviesDataModel
 
 class MoviesListViewModelTests: XCTestCase {
     var subject: MoviesListViewModel!

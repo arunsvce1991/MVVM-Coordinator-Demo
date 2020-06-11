@@ -9,6 +9,7 @@
 import XCTest
 
 @testable import MoviesApp
+import MoviesDataModel
 
 class MoviesCoordinatorTests: XCTestCase {
     var subject: MoviesCoordinator!
