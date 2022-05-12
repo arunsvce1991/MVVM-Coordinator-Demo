@@ -9,6 +9,7 @@
 import XCTest
 
 @testable import MoviesApp
+import MoviesDataModel
 
 class MoviesCoordinatorTests: XCTestCase {
     var subject: MoviesCoordinator!
@@ -18,14 +19,14 @@ class MoviesCoordinatorTests: XCTestCase {
     override func setUp() {
         router = Router()
         let moviesListViewModelBuilder: MoviesListViewModelBuilder = { MockMoviesListViewModel() }
-        let MovieDetailsViewModelBuilder: MovieDetailsViewModelBuilder = {(movieDetails) in
+        let movieDetailsViewModelBuilder: MovieDetailsViewModelBuilder = {(movieDetails) in
             self.receivedMovieDetails = movieDetails
             return MovieDetailsViewModel(movieDetails: movieDetails)
         }
         
         subject = MoviesCoordinator(router: router,
                                     moviesListViewModelBuilder: moviesListViewModelBuilder,
-                                    movieDetailsViewModelBuilder: MovieDetailsViewModelBuilder)
+                                    movieDetailsViewModelBuilder: movieDetailsViewModelBuilder)
     }
     
     func testShowMoviesListFlow() {
